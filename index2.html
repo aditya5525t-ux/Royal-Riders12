@@ -1,0 +1,1823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Royal Riders | Ride Beyond Ordinary</title>
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#fff8fc;
+    color:#392936;
+    line-height:1.6;
+}
+
+img{
+    display:block;
+    width:100%;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+section{
+    overflow:hidden;
+}
+
+
+/* =========================================================
+   COLORS
+========================================================= */
+
+:root{
+    --pink:#d86b9a;
+    --rose:#b94d7d;
+    --lavender:#9d82d5;
+    --purple:#7655a8;
+    --cream:#fff8fc;
+    --soft:#f9edf5;
+    --text:#392936;
+    --muted:#766875;
+    --dark:#20151d;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+
+    padding:20px 6%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:rgba(255,248,252,.88);
+    backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(216,107,154,.15);
+}
+
+.logo{
+    font-size:25px;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:var(--pink);
+}
+
+.nav-links{
+    display:flex;
+    gap:32px;
+    list-style:none;
+}
+
+.nav-links a{
+    font-size:13px;
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:#5b4655;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:var(--pink);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    min-height:100vh;
+
+    display:flex;
+    align-items:flex-end;
+
+    padding:150px 8% 90px;
+
+    position:relative;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(65,28,50,.72),
+            rgba(120,72,105,.38),
+            rgba(255,210,230,.12)
+        ),
+        url("images/hero.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:1000px;
+    color:white;
+}
+
+.hero-small{
+    font-size:15px;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(65px,10vw,150px);
+    line-height:.86;
+    font-weight:900;
+    font-style:italic;
+    letter-spacing:-6px;
+    text-transform:uppercase;
+}
+
+.hero h1 span{
+    display:block;
+    color:#ffd3e5;
+}
+
+.hero-description{
+    max-width:620px;
+    margin-top:30px;
+    font-size:18px;
+    color:#ffeef6;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+    margin-top:35px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 30px;
+
+    background:linear-gradient(135deg,#d86b9a,#9d82d5);
+
+    color:white;
+    border-radius:40px;
+
+    font-size:13px;
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:1px;
+
+    box-shadow:0 12px 30px rgba(216,107,154,.25);
+}
+
+.btn-outline{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.7);
+    backdrop-filter:blur(10px);
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro{
+    padding:120px 8%;
+    text-align:center;
+    background:white;
+}
+
+.eyebrow{
+    color:var(--pink);
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    margin-bottom:18px;
+}
+
+.section-title{
+    font-size:clamp(45px,6vw,75px);
+    line-height:1;
+    font-style:italic;
+    font-weight:900;
+    text-transform:uppercase;
+    color:#392936;
+}
+
+.intro-text{
+    max-width:760px;
+    margin:30px auto 0;
+    color:var(--muted);
+    font-size:17px;
+}
+
+
+/* =========================================================
+   STORY SECTION
+========================================================= */
+
+.story{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    min-height:700px;
+}
+
+.story-image{
+    min-height:600px;
+
+    background:
+        linear-gradient(
+            rgba(80,35,60,.12),
+            rgba(80,35,60,.15)
+        ),
+        url("images/classic350.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.story-content{
+    padding:90px 10%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(216,107,154,.2),
+            transparent 35%
+        ),
+        #fff4f9;
+}
+
+.story-content h2{
+    font-size:clamp(42px,5vw,70px);
+    line-height:1;
+    font-style:italic;
+    margin-bottom:30px;
+}
+
+.story-content p{
+    color:var(--muted);
+    margin-bottom:20px;
+    font-size:16px;
+}
+
+.story-line{
+    width:70px;
+    height:4px;
+    background:linear-gradient(90deg,var(--pink),var(--lavender));
+    margin-bottom:30px;
+}
+
+
+/* =========================================================
+   THREE FEATURE CARDS
+========================================================= */
+
+.features{
+    padding:110px 5%;
+    background:white;
+}
+
+.features-heading{
+    text-align:center;
+    max-width:800px;
+    margin:0 auto 60px;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.feature-card{
+    background:#fff;
+    border-radius:25px;
+    overflow:hidden;
+
+    box-shadow:0 15px 45px rgba(80,40,70,.09);
+
+    transition:.4s;
+}
+
+.feature-card:hover{
+    transform:translateY(-10px);
+}
+
+.feature-card img{
+    height:380px;
+    object-fit:cover;
+}
+
+.feature-info{
+    padding:30px;
+}
+
+.feature-number{
+    color:var(--pink);
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.feature-info h3{
+    font-size:28px;
+    margin:10px 0;
+    font-style:italic;
+}
+
+.feature-info p{
+    color:var(--muted);
+}
+
+
+/* =========================================================
+   FULL IMAGE SECTION
+========================================================= */
+
+.full-image{
+    min-height:780px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+        linear-gradient(
+            rgba(55,20,43,.38),
+            rgba(55,20,43,.62)
+        ),
+        url("images/adventure.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.full-image-content{
+    max-width:950px;
+    color:white;
+    padding:30px;
+}
+
+.full-image-content h2{
+    font-size:clamp(55px,9vw,120px);
+    line-height:.9;
+    font-style:italic;
+    font-weight:900;
+    text-transform:uppercase;
+}
+
+.full-image-content p{
+    max-width:650px;
+    margin:30px auto;
+    font-size:18px;
+    color:#ffeef7;
+}
+
+
+/* =========================================================
+   MOTORCYCLE COLLECTION
+========================================================= */
+
+.collection{
+    padding:120px 5%;
+    background:#fff8fc;
+}
+
+.collection-heading{
+    text-align:center;
+    margin-bottom:65px;
+}
+
+.collection-heading p{
+    max-width:700px;
+    margin:25px auto 0;
+    color:var(--muted);
+}
+
+.bike-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.bike-card{
+    background:white;
+    border-radius:25px;
+    overflow:hidden;
+
+    box-shadow:0 15px 45px rgba(80,40,70,.09);
+}
+
+.bike-card img{
+    height:430px;
+    object-fit:cover;
+}
+
+.bike-content{
+    padding:30px;
+}
+
+.bike-content h3{
+    font-size:32px;
+    font-style:italic;
+}
+
+.bike-content .category{
+    color:var(--pink);
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-weight:bold;
+}
+
+.bike-content p{
+    margin-top:15px;
+    color:var(--muted);
+}
+
+.bike-link{
+    display:inline-block;
+    margin-top:20px;
+    color:var(--rose);
+    font-weight:bold;
+}
+
+
+/* =========================================================
+   ENGINEERING SECTION
+========================================================= */
+
+.engineering{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    min-height:750px;
+}
+
+.engineering-image{
+    background:
+        linear-gradient(
+            rgba(90,35,70,.15),
+            rgba(90,35,70,.15)
+        ),
+        url("images/hunter350.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.engineering-content{
+    padding:90px 10%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fbeaf3,
+            #f2eafa
+        );
+}
+
+.engineering-content h2{
+    font-size:clamp(45px,5vw,75px);
+    line-height:1;
+    font-style:italic;
+    margin-bottom:30px;
+}
+
+.engineering-content p{
+    color:var(--muted);
+    margin-bottom:20px;
+}
+
+.engineering-list{
+    margin-top:20px;
+    list-style:none;
+}
+
+.engineering-list li{
+    padding:14px 0;
+    border-bottom:1px solid rgba(118,85,168,.18);
+    font-weight:bold;
+}
+
+.engineering-list li::before{
+    content:"✦";
+    color:var(--pink);
+    margin-right:12px;
+}
+
+
+/* =========================================================
+   RIDING EXPERIENCE
+========================================================= */
+
+.experience{
+    padding:120px 7%;
+    background:white;
+}
+
+.experience-heading{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.experience-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.experience-box{
+    padding:35px 25px;
+    border-radius:22px;
+
+    background:linear-gradient(
+        145deg,
+        #fff5f9,
+        #f4effb
+    );
+
+    border:1px solid rgba(216,107,154,.12);
+}
+
+.experience-box .icon{
+    font-size:35px;
+    margin-bottom:20px;
+}
+
+.experience-box h3{
+    margin-bottom:12px;
+    font-size:20px;
+}
+
+.experience-box p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+
+/* =========================================================
+   ADVENTURE SECTION
+========================================================= */
+
+.adventure{
+    min-height:750px;
+
+    display:flex;
+    align-items:flex-end;
+
+    padding:80px 8%;
+
+    background:
+        linear-gradient(
+            rgba(45,18,35,.05),
+            rgba(45,18,35,.72)
+        ),
+        url("images/himalayan.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.adventure-content{
+    color:white;
+    max-width:850px;
+}
+
+.adventure-content h2{
+    font-size:clamp(55px,8vw,110px);
+    line-height:.9;
+    font-style:italic;
+    font-weight:900;
+    text-transform:uppercase;
+}
+
+.adventure-content p{
+    max-width:650px;
+    margin-top:25px;
+    font-size:18px;
+}
+
+
+/* =========================================================
+   HERITAGE
+========================================================= */
+
+.heritage{
+    padding:120px 8%;
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(216,107,154,.18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(157,130,213,.18),
+            transparent 30%
+        ),
+        #fff9fc;
+}
+
+.heritage-inner{
+    max-width:1000px;
+    margin:auto;
+    text-align:center;
+}
+
+.heritage-inner p{
+    color:var(--muted);
+    font-size:17px;
+    margin-top:25px;
+}
+
+.heritage-stats{
+    margin-top:60px;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.stat{
+    padding:35px;
+    background:white;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(80,40,70,.08);
+}
+
+.stat strong{
+    display:block;
+    font-size:45px;
+    color:var(--pink);
+    font-style:italic;
+}
+
+.stat span{
+    color:var(--muted);
+}
+
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.gallery{
+    padding:110px 4%;
+    background:white;
+}
+
+.gallery-heading{
+    text-align:center;
+    margin-bottom:55px;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    grid-auto-rows:260px;
+    gap:15px;
+}
+
+.gallery-item{
+    overflow:hidden;
+    border-radius:15px;
+}
+
+.gallery-item.large{
+    grid-column:span 2;
+    grid-row:span 2;
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.06);
+}
+
+
+/* =========================================================
+   TEST RIDE
+========================================================= */
+
+.test-ride{
+    padding:120px 8%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8dce9,
+            #eee4fa
+        );
+}
+
+.test-ride-container{
+    max-width:1100px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.test-ride-text h2{
+    font-size:clamp(45px,5vw,70px);
+    line-height:1;
+    font-style:italic;
+}
+
+.test-ride-text p{
+    margin-top:25px;
+    color:var(--muted);
+}
+
+.test-form{
+    background:white;
+    padding:40px;
+    border-radius:25px;
+
+    box-shadow:0 20px 50px rgba(80,40,70,.12);
+}
+
+.test-form input,
+.test-form select,
+.test-form textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+
+    border:1px solid #ead8e3;
+    border-radius:10px;
+
+    outline:none;
+    font-family:inherit;
+}
+
+.test-form input:focus,
+.test-form select:focus,
+.test-form textarea:focus{
+    border-color:var(--pink);
+}
+
+.test-form textarea{
+    height:110px;
+    resize:none;
+}
+
+.submit-btn{
+    width:100%;
+    border:none;
+    cursor:pointer;
+
+    padding:16px;
+
+    border-radius:30px;
+
+    background:linear-gradient(
+        135deg,
+        var(--pink),
+        var(--lavender)
+    );
+
+    color:white;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.final-cta{
+    min-height:600px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+        linear-gradient(
+            rgba(40,16,31,.55),
+            rgba(40,16,31,.72)
+        ),
+        url("images/hero.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.final-cta-content{
+    color:white;
+    padding:30px;
+}
+
+.final-cta h2{
+    font-size:clamp(55px,8vw,110px);
+    line-height:.9;
+    font-style:italic;
+    font-weight:900;
+    text-transform:uppercase;
+}
+
+.final-cta p{
+    margin:25px auto;
+    max-width:650px;
+    color:#ffeef6;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    background:#21161e;
+    color:white;
+    padding:70px 7% 30px;
+}
+
+.footer-main{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:50px;
+    padding-bottom:50px;
+}
+
+.footer-brand h2{
+    font-size:30px;
+    letter-spacing:2px;
+}
+
+.footer-brand h2 span{
+    color:#e48bad;
+}
+
+.footer-brand p{
+    margin-top:20px;
+    max-width:450px;
+    color:#c5b8c1;
+}
+
+.footer-column h3{
+    margin-bottom:20px;
+    color:#f1b5cc;
+}
+
+.footer-column a{
+    display:block;
+    color:#c5b8c1;
+    margin-bottom:10px;
+}
+
+.footer-bottom{
+    padding-top:25px;
+    border-top:1px solid rgba(255,255,255,.1);
+    color:#a99aa4;
+    font-size:13px;
+    text-align:center;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1000px){
+
+    .feature-grid,
+    .bike-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .experience-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .test-ride-container{
+        grid-template-columns:1fr;
+    }
+}
+
+
+@media(max-width:750px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero{
+        padding:130px 6% 70px;
+    }
+
+    .hero h1{
+        letter-spacing:-3px;
+    }
+
+    .story,
+    .engineering{
+        grid-template-columns:1fr;
+    }
+
+    .story-image,
+    .engineering-image{
+        min-height:500px;
+    }
+
+    .feature-grid,
+    .bike-grid,
+    .experience-grid,
+    .heritage-stats{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+        grid-auto-rows:300px;
+    }
+
+    .gallery-item.large{
+        grid-column:span 1;
+        grid-row:span 1;
+    }
+
+    .footer-main{
+        grid-template-columns:1fr;
+    }
+
+    .section-title{
+        font-size:43px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ======================================================
+     NAVIGATION
+====================================================== -->
+
+<header class="navbar">
+
+    <div class="logo">
+        ROYAL <span>RIDERS</span>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#story">Story</a></li>
+        <li><a href="#bikes">Motorcycles</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#test">Test Ride</a></li>
+    </ul>
+
+</header>
+
+
+<!-- ======================================================
+     HERO
+====================================================== -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="hero-small">
+            Royal Riders
+        </div>
+
+        <h1>
+            Ride
+            <span>Beyond</span>
+            Ordinary
+        </h1>
+
+        <p class="hero-description">
+            Discover motorcycles created for people who
+            don't simply follow the road — they create
+            their own journey.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#bikes" class="btn">
+                Explore Motorcycles
+            </a>
+
+            <a href="#story" class="btn btn-outline">
+                Discover Our Story
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     INTRO
+====================================================== -->
+
+<section class="intro">
+
+    <div class="eyebrow">
+        The Royal Riders Philosophy
+    </div>
+
+    <h2 class="section-title">
+        More Than A Motorcycle
+    </h2>
+
+    <p class="intro-text">
+        A motorcycle is more than metal, wheels and an engine.
+        It is the feeling of opening the throttle on an empty
+        road, the freedom of choosing where to go next and
+        the memories created along the way.
+    </p>
+
+</section>
+
+
+<!-- ======================================================
+     STORY
+====================================================== -->
+
+<section class="story" id="story">
+
+    <div class="story-image"></div>
+
+    <div class="story-content">
+
+        <div class="story-line"></div>
+
+        <div class="eyebrow">
+            Our Story
+        </div>
+
+        <h2>
+            Born From The Love Of Riding
+        </h2>
+
+        <p>
+            Royal Riders is built around a simple idea:
+            motorcycles should make every journey feel
+            special.
+        </p>
+
+        <p>
+            From the first turn of the key to the final
+            kilometre of a long journey, every part of the
+            riding experience should feel connected,
+            purposeful and memorable.
+        </p>
+
+        <p>
+            Our collection celebrates different kinds of
+            riders — from the person who loves timeless
+            design to the rider who wants to disappear
+            beyond the city and discover something new.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     FEATURES
+====================================================== -->
+
+<section class="features">
+
+    <div class="features-heading">
+
+        <div class="eyebrow">
+            What Defines Us
+        </div>
+
+        <h2 class="section-title">
+            Built Around Riders
+        </h2>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+        <article class="feature-card">
+
+            <img src="images/classic350.jpg" alt="Classic motorcycle">
+
+            <div class="feature-info">
+
+                <div class="feature-number">
+                    01
+                </div>
+
+                <h3>Pure Heritage</h3>
+
+                <p>
+                    A timeless motorcycle aesthetic that
+                    respects the past while continuing to
+                    evolve for modern riders.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="feature-card">
+
+            <img src="images/hunter350.jpg" alt="Urban motorcycle">
+
+            <div class="feature-info">
+
+                <div class="feature-number">
+                    02
+                </div>
+
+                <h3>Modern Spirit</h3>
+
+                <p>
+                    Compact proportions, confident styling
+                    and an energetic character for everyday
+                    roads and city adventures.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="feature-card">
+
+            <img src="images/himalayan.jpg" alt="Adventure motorcycle">
+
+            <div class="feature-info">
+
+                <div class="feature-number">
+                    03
+                </div>
+
+                <h3>Adventure Ready</h3>
+
+                <p>
+                    For riders who see the end of the road
+                    not as a destination, but as the beginning
+                    of another journey.
+                </p>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     FULL IMAGE
+====================================================== -->
+
+<section class="full-image">
+
+    <div class="full-image-content">
+
+        <h2>
+            Most Demanding.<br>
+            Most Rewarding.
+        </h2>
+
+        <p>
+            Some roads challenge you. Some roads change you.
+            The right motorcycle gives you the confidence
+            to take both.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     MOTORCYCLES
+====================================================== -->
+
+<section class="collection" id="bikes">
+
+    <div class="collection-heading">
+
+        <div class="eyebrow">
+            The Collection
+        </div>
+
+        <h2 class="section-title">
+            Choose Your Machine
+        </h2>
+
+        <p>
+            Different roads demand different personalities.
+            Explore three distinct motorcycle experiences
+            designed for different kinds of riders.
+        </p>
+
+    </div>
+
+
+    <div class="bike-grid">
+
+
+        <article class="bike-card">
+
+            <img src="images/classic350.jpg" alt="Classic 350">
+
+            <div class="bike-content">
+
+                <div class="category">
+                    Heritage Roadster
+                </div>
+
+                <h3>Classic 350</h3>
+
+                <p>
+                    The Classic 350 brings timeless motorcycle
+                    styling together with a comfortable and
+                    relaxed riding character.
+                </p>
+
+                <a href="#" class="bike-link">
+                    Discover Classic →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <article class="bike-card">
+
+            <img src="images/hunter350.jpg" alt="Hunter 350">
+
+            <div class="bike-content">
+
+                <div class="category">
+                    Urban Motorcycle
+                </div>
+
+                <h3>Hunter 350</h3>
+
+                <p>
+                    Designed around an energetic urban attitude,
+                    the Hunter brings a compact character to
+                    everyday riding.
+                </p>
+
+                <a href="#" class="bike-link">
+                    Discover Hunter →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <article class="bike-card">
+
+            <img src="images/himalayan.jpg" alt="Himalayan">
+
+            <div class="bike-content">
+
+                <div class="category">
+                    Adventure Motorcycle
+                </div>
+
+                <h3>Himalayan</h3>
+
+                <p>
+                    Created for riders who want to explore beyond
+                    familiar roads and take their motorcycle
+                    into new environments.
+                </p>
+
+                <a href="#" class="bike-link">
+                    Discover Adventure →
+                </a>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     ENGINEERING
+====================================================== -->
+
+<section class="engineering">
+
+    <div class="engineering-image"></div>
+
+    <div class="engineering-content">
+
+        <div class="eyebrow">
+            Engineering
+        </div>
+
+        <h2>
+            Designed To Feel Right
+        </h2>
+
+        <p>
+            Great motorcycle engineering isn't only about
+            numbers. It is about how the machine responds
+            when you accelerate, turn, brake and settle into
+            a long ride.
+        </p>
+
+        <p>
+            Every detail contributes to the experience —
+            from the riding position and controls to the
+            relationship between the engine, chassis and road.
+        </p>
+
+        <ul class="engineering-list">
+
+            <li>Confident road presence</li>
+            <li>Comfort-focused riding position</li>
+            <li>Purposeful motorcycle design</li>
+            <li>Built around real riding experiences</li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     RIDING EXPERIENCE
+====================================================== -->
+
+<section class="experience" id="experience">
+
+    <div class="experience-heading">
+
+        <div class="eyebrow">
+            The Experience
+        </div>
+
+        <h2 class="section-title">
+            Every Ride Tells A Story
+        </h2>
+
+    </div>
+
+
+    <div class="experience-grid">
+
+
+        <div class="experience-box">
+
+            <div class="icon">🏍️</div>
+
+            <h3>Confidence</h3>
+
+            <p>
+                A motorcycle should inspire confidence
+                whether you're travelling through traffic
+                or opening the road ahead.
+            </p>
+
+        </div>
+
+
+        <div class="experience-box">
+
+            <div class="icon">🛣️</div>
+
+            <h3>Freedom</h3>
+
+            <p>
+                Choose your direction, leave the routine
+                behind and discover roads you've never
+                travelled before.
+            </p>
+
+        </div>
+
+
+        <div class="experience-box">
+
+            <div class="icon">✨</div>
+
+            <h3>Character</h3>
+
+            <p>
+                The best motorcycles have personality.
+                They become part of the rider's identity.
+            </p>
+
+        </div>
+
+
+        <div class="experience-box">
+
+            <div class="icon">🌄</div>
+
+            <h3>Adventure</h3>
+
+            <p>
+                From city streets to distant landscapes,
+                every journey can become a story worth
+                remembering.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     ADVENTURE
+====================================================== -->
+
+<section class="adventure">
+
+    <div class="adventure-content">
+
+        <div class="eyebrow" style="color:#ffd0e1;">
+            Beyond The Familiar
+        </div>
+
+        <h2>
+            Find Your<br>
+            Own Road
+        </h2>
+
+        <p>
+            There is something different about riding
+            somewhere you've never been before. The road
+            becomes part of the experience, and every turn
+            becomes an invitation to continue.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     HERITAGE
+====================================================== -->
+
+<section class="heritage">
+
+    <div class="heritage-inner">
+
+        <div class="eyebrow">
+            The Spirit Of Riding
+        </div>
+
+        <h2 class="section-title">
+            A Legacy That Moves Forward
+        </h2>
+
+        <p>
+            Motorcycle culture has always been about more
+            than transportation. It brings together design,
+            engineering, exploration and community.
+        </p>
+
+        <p>
+            Royal Riders celebrates that spirit through a
+            modern visual experience designed for people
+            who appreciate motorcycles and the stories
+            behind them.
+        </p>
+
+
+        <div class="heritage-stats">
+
+            <div class="stat">
+                <strong>01</strong>
+                <span>Passion for riding</span>
+            </div>
+
+            <div class="stat">
+                <strong>02</strong>
+                <span>Machines with character</span>
+            </div>
+
+            <div class="stat">
+                <strong>03</strong>
+                <span>Journeys without limits</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     GALLERY
+====================================================== -->
+
+<section class="gallery" id="gallery">
+
+    <div class="gallery-heading">
+
+        <div class="eyebrow">
+            Visual Stories
+        </div>
+
+        <h2 class="section-title">
+            The Gallery
+        </h2>
+
+    </div>
+
+
+    <div class="gallery-grid">
+
+        <div class="gallery-item large">
+            <img src="images/hero.jpg" alt="Royal Riders motorcycle">
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/classic350.jpg" alt="Classic motorcycle">
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/hunter350.jpg" alt="Hunter motorcycle">
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/himalayan.jpg" alt="Adventure motorcycle">
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/adventure.jpg" alt="Adventure ride">
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     TEST RIDE
+====================================================== -->
+
+<section class="test-ride" id="test">
+
+    <div class="test-ride-container">
+
+        <div class="test-ride-text">
+
+            <div class="eyebrow">
+                Your Journey Starts Here
+            </div>
+
+            <h2>
+                Feel The Motorcycle For Yourself.
+            </h2>
+
+            <p>
+                Reading about a motorcycle can only tell you
+                so much. The real experience begins when you
+                sit on the machine, start the engine and take
+                your first ride.
+            </p>
+
+            <p>
+                Fill out the form and tell us which motorcycle
+                you would like to explore.
+            </p>
+
+        </div>
+
+
+        <form class="test-form" onsubmit="submitRide(event)">
+
+            <input
+                type="text"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                placeholder="Email Address"
+                required
+            >
+
+            <input
+                type="tel"
+                placeholder="Phone Number"
+                required
+            >
+
+            <select required>
+
+                <option value="">
+                    Select Motorcycle
+                </option>
+
+                <option>
+                    Classic 350
+                </option>
+
+                <option>
+                    Hunter 350
+                </option>
+
+                <option>
+                    Himalayan
+                </option>
+
+            </select>
+
+            <textarea
+                placeholder="Tell us anything you'd like to know..."
+            ></textarea>
+
+            <button class="submit-btn" type="submit">
+                Request A Test Ride
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     FINAL CTA
+====================================================== -->
+
+<section class="final-cta">
+
+    <div class="final-cta-content">
+
+        <div class="eyebrow" style="color:#ffd0e1;">
+            Royal Riders
+        </div>
+
+        <h2>
+            Ride Your<br>
+            Legend
+        </h2>
+
+        <p>
+            The road is waiting. Your story is yours to create.
+        </p>
+
+        <a href="#test" class="btn">
+            Start Your Journey
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     FOOTER
+====================================================== -->
+
+<footer>
+
+    <div class="footer-main">
+
+        <div class="footer-brand">
+
+            <h2>
+                ROYAL <span>RIDERS</span>
+            </h2>
+
+            <p>
+                A motorcycle-focused digital experience
+                celebrating heritage, engineering, adventure
+                and the freedom of the open road.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Explore</h3>
+
+            <a href="#story">Our Story</a>
+            <a href="#bikes">Motorcycles</a>
+            <a href="#experience">Experience</a>
+            <a href="#gallery">Gallery</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Journey</h3>
+
+            <a href="#test">Test Ride</a>
+            <a href="#home">Back To Top</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        © 2026 Royal Riders. Built for the love of motorcycles.
+
+    </div>
+
+</footer>
+
+
+<script>
+
+function submitRide(event){
+
+    event.preventDefault();
+
+    alert(
+        "Thank you for choosing Royal Riders! 🏍️\n\n" +
+        "Your test ride request has been received."
+    );
+
+}
+
+</script>
+
+
+</body>
+</html>
